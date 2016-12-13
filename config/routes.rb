@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get '/session/new', to: 'session#new'
   post '/session', to: 'session#create'
   delete '/session', to: 'session#destroy'
-  
+
 end
