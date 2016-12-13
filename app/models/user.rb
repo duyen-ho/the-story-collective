@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
+  has_many :parts
 
   validates :name, presence: true
   validates :name, length: { minimum: 6 }

@@ -1,2 +1,11 @@
-<h1>Stories#new</h1>
-<p>Find me in app/views/stories/new.html.erb</p>
+<h2>New Story</h2>
+
+<%= form_tag '/stories', method: 'post' do %>
+
+    <label for="part">Enter text</label>
+    <input name="body" type="text">
+    <span>140 characters</span>
+
+    <button>Submit</button>
+
+<% end %>
