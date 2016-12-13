@@ -1,0 +1,5 @@
+<img src="<%= @user.photo_url %>">
+<h2>About <%= @user.name %></h2>
+<h4>Member since <%= @user.created_at.strftime('%B %Y') %></h4>
+<p><%= @user.description %></p>
+<p><%= @user.email %></p>
