@@ -1,6 +1,9 @@
 class SessionController < ApplicationController
 
   def new
+    if logged_in?
+      redirect_to '/'
+    end
   end
 
   def create
@@ -15,6 +18,7 @@ class SessionController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    redirect_to '/login'
   end
 
 end

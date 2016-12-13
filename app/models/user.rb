@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   validates :password, length: { in: 6..20 }
 
-  validates :description, presence: true
-  validates :description, length: { maximum: 300 }
+  # validates :description, presence: true
+  # validates :description, length: { maximum: 300 }
 
 end

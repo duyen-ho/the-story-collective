@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
   resources :users
 
+  get    '/signup',  to: 'users#new'
+
   # Sessions
-  get '/session/new', to: 'session#new'
-  post '/session', to: 'session#create'
-  delete '/session', to: 'session#destroy'
+  get    '/login',   to: 'session#new'
+  post   '/login',   to: 'session#create'
+  delete '/logout',  to: 'session#destroy'
 
 end

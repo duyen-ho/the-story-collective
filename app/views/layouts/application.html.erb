@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TheStoryCollective</title>
+    <title>The Story Collective</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,29 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <nav>
+      <ul>
+        <% if logged_in? %>
+        <li><a href="/users/<%=current_user.id%>"><%= current_user.name %></a></li>
+        <li>
+          <form action="/logout" method="post">
+            <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+            <input type="hidden" name="_method" value="delete">
+            <button>Log Out</button>
+          </form>
+        </li>
+        <% else %>
+        <li><a href="/login">Log In</a></li>
+        <li><a href="/signup">Sign Up</a></li>
+        <% end %>
+      </ul>
+    </nav>
+
+
+    <main>
+      <%= yield %>
+    </main>
+
   </body>
 </html>
