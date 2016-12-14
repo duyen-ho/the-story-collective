@@ -6,7 +6,7 @@ class StoriesController < ApplicationController
   def show
     @story = Story.find_by(id: params[:id])
     @parts = Part.where(story_id: params[:id]).order(:created_at)
-
+    # debugger
     if @story
       render :show
     else

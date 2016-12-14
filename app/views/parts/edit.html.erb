@@ -2,7 +2,8 @@
 
 <% @parts.each do |part| %>
 
-  <p><%= part.body %></p>
+<p><%= part.body %></p>
+<a href="/users/<%= part.user_id %>"><%= User.find(part.user_id).name %></a>
 
 <% end %>
 

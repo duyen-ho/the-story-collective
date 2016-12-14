@@ -1,6 +1,7 @@
 <h2><%= @story.title %></h2>
 
 <h3>Narrative</h3>
+
 <% @parts.each do |part| %>
   <%= part.body %>
 <% end %>
@@ -10,4 +11,18 @@
   <p><%= part.body %></p>
   <a href="/users/<%= part.user_id %>"><%= User.find(part.user_id).name %>
 </a>
+
+<% end %>
+
+<% if @parts.length < 10 && @parts.last.user_id != current_user.id %>
+
+<form action="/stories/<%= @story.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <input name="body" type="text">
+  <span>140 characters</span>
+  <button>Submit</button>
+</form>
+
 <% end %>
