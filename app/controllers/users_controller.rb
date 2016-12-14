@@ -21,6 +21,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+
+    @parts = Part.where(user_id: params[:id]).order(:created_at)
+
   end
 
 end

@@ -3,3 +3,13 @@
 <h4>Member since <%= @user.created_at.strftime('%B %Y') %></h4>
 <p><%= @user.description %></p>
 <p><%= @user.email %></p>
+
+<h3>Stories</h3>
+
+<% @parts.each do |part| %>
+  <div>
+    <a href="/stories/<%= part.story_id%>"><%= part.body %></a>
+    <p><%= part.created_at.to_s(:long) %></p>
+  </div>
+
+<% end %>
