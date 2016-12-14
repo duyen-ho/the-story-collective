@@ -1,18 +1,19 @@
 Rails.application.routes.draw do
-  # get 'stories/new'
-  #
-  # get 'stories/show'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :users
-  resources :stories
 
-  get    '/signup',  to: 'users#new'
+  get '/signup', to: 'users#new'
 
-  # Sessions
-  get    '/login',   to: 'session#new'
-  post   '/login',   to: 'session#create'
-  delete '/logout',  to: 'session#destroy'
+  get '/login', to: 'session#new'
+  post '/login', to: 'session#create'
+  delete '/logout', to: 'session#destroy'
+
+  get 'stories', to: 'stories#index'
+  get 'stories/new', to: 'parts#new'
+  post 'stories', to: 'parts#create'
+  get 'stories/:id', to: 'stories#show'
+  get 'stories/:id/edit', to: 'parts#edit'
+  patch 'stories/:id', to: 'parts#update'
+
 
 end
