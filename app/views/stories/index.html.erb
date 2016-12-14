@@ -1,0 +1,34 @@
+<h2>Narrative</h2>
+
+<% @stories.each do |story| %>
+
+  <% @parts = Part.where(story_id: story.id) %>
+
+  <% if @parts.length == 10 %>
+  <div>
+    <h3><%= story.title %></h3>
+    <% @parts.each do |part| %>
+      <%= part.body %>
+    <% end %>
+  </div>
+  <% end %>
+
+<% end %>
+
+
+<h2>Fragments</h2>
+
+<% @stories.each do |story| %>
+
+  <% @parts = Part.where(story_id: story.id) %>
+
+  <% if @parts.length < 10 %>
+  <div>
+    <h3><%= story.title %></h3>
+    <% @parts.each do |part| %>
+      <%= part.body %>
+    <% end %>
+  </div>
+  <% end %>
+
+<% end %>

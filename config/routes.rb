@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :users
 
+  get '/', to: 'stories#index'
   get '/signup', to: 'users#new'
 
   get '/login', to: 'session#new'
