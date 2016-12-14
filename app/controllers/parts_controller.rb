@@ -17,7 +17,7 @@ class PartsController < ApplicationController
     part.body = params[:body]
     # TODO: change redirect and catch error
     if part.save
-      redirect_to '/'
+      redirect_to "/stories/#{story.id}"
     end
   end
 
@@ -40,7 +40,7 @@ class PartsController < ApplicationController
     part.body = params[:body]
     # TODO: change redirect and catch error
     if part.save
-      redirect_to '/'
+      redirect_to "/stories/#{params[:id]}"
     end
 
   end
