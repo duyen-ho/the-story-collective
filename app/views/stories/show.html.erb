@@ -1,1 +1,13 @@
-<h2>Stories#show</h2>
+<h2><%= @story.title %></h2>
+
+<h3>Narrative</h3>
+<% @parts.each do |part| %>
+  <%= part.body %>
+<% end %>
+
+<h3>Fragments</h3>
+<% @parts.each do |part| %>
+  <p><%= part.body %></p>
+  <a href="/users/<%= part.user_id %>"><%= User.find(part.user_id).name %>
+</a>
+<% end %>
