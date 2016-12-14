@@ -26,3 +26,15 @@
 </form>
 
 <% end %>
+
+<div>
+
+  <% if @story.id != 1 %>
+  <a href="/stories/<%= @story.id - 1 %>"><</a>
+  <% end %>
+
+  <% if @story.id != Story.count %>
+  <a href="/stories/<%= @story.id + 1 %>">></a>
+  <% end %>
+
+</div>
