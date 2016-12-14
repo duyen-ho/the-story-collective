@@ -6,7 +6,7 @@
 
   <% if @parts.length == 10 %>
   <div>
-    <h3><%= story.title %></h3>
+    <a href="/stories/<%= story.id %>"><h3><%= story.title %>STORY TITLE</h3></a>
     <% @parts.each do |part| %>
       <%= part.body %>
     <% end %>
@@ -24,7 +24,7 @@
 
   <% if @parts.length < 10 %>
   <div>
-    <h3><%= story.title %></h3>
+    <a href="/stories/<%= story.id %>"><h3><%= story.title %>STORY TITLE</h3></a>
     <% @parts.each do |part| %>
       <%= part.body %>
     <% end %>
