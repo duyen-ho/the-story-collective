@@ -1,4 +1,5 @@
-<%= form_tag '/users', method: 'post' do %>
+<form action="/users" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
   <label for="name">Username</label>
   <input name="name" type="text">
@@ -29,4 +30,4 @@
 
   <button>Sign Up</button>
 
-<% end %>
+</form>

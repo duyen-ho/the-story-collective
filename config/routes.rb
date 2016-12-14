@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'stories', to: 'stories#index'
   get 'stories/new', to: 'parts#new'
-  post 'stories', to: 'parts#create'
+  post 'stories/new', to: 'parts#create'
   get 'stories/:id', to: 'stories#show'
   get 'stories/:id/edit', to: 'parts#edit'
   patch 'stories/:id', to: 'parts#update'
