@@ -14,7 +14,11 @@
 
 <% end %>
 
-<% if @parts.length < 10 && @parts.last.user_id != current_user.id %>
+<% if current_user == nil %>
+
+<p><a href="/login">Log In</a> or <a href="/signup">Sign up</a> to contribute to the story</p>
+
+<% elsif @parts.length < 10 && @parts.last.user_id != current_user.id %>
 
 <form action="/stories/<%= @story.id %>" method="post">
   <input type="hidden" name="_method" value="patch">
