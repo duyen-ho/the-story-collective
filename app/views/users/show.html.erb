@@ -1,15 +1,36 @@
-<img src="<%= @user.photo_url %>">
-<h2>About <%= @user.name %></h2>
-<h4>Member since <%= @user.created_at.strftime('%B %Y') %></h4>
-<p><%= @user.description %></p>
-<p><%= @user.email %></p>
+<div class="container">
+  <div class="row margin">
+    <div class="col l12">
 
-<h3>Stories</h3>
+      <div class="col l2 offset-l2">
+        <img class="circle" src="<%= @user.photo_url %>">
+      </div>
 
-<% @parts.each do |part| %>
-  <div>
-    <a href="/stories/<%= part.story_id%>"><%= part.body %></a>
-    <p><%= part.created_at.to_s(:long) %></p>
+      <div class="col l8">
+        <h3>About <%= @user.name %></h3>
+        <p>Member since <%= @user.created_at.strftime('%B %Y') %></p>
+        <h4>Description</h4>
+        <p><%= @user.description %></p>
+        <p><%= @user.email %></p>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col l8 offset-l2 margin">
+        <h3>Stories</h3>
+        <ul class ="collection">
+        <% @parts.each do |part| %>
+          <li class="collection-item">
+            <a href="/stories/<%= part.story_id%>"><%= part.body %></a>
+            <p><%= part.created_at.to_s(:long) %></p>
+          </li>
+        <% end %>
+      </div>
+    </div>
+
+
+
+    </div>
   </div>
-
-<% end %>
+</div>
