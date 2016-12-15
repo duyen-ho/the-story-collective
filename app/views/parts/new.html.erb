@@ -1,11 +1,46 @@
-<h2>New Story</h2>
+<div class="container">
+  <div class="row">
+    <div class="col s8 offset-s2">
+      <h2>New Story</h2>
 
-<%= form_tag '/stories/new', method: 'post' do %>
+      <%= form_tag '/stories/new', method: 'post' do %>
 
-    <label for="part">Enter text</label>
-    <input name="body" type="text">
-    <span>140 characters</span>
+        <div class="row">
+          <div class="input-field col s12">
+            <label for="part">Enter Part One</label>
+            <textarea name="body" type="text" class="materialize-textarea" maxlength="140"></textarea>
+            <span></span> characters
+            <button class="waves-effect waves-light btn black right">Submit</button>
+          </div>
+        </div>
 
-    <button>Submit</button>
+      <% end %>
 
-<% end %>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+  var maxChars = 140;
+  $('span').empty().append(maxChars);
+
+  $('textarea').keyup(function() {
+
+    var text = $(this).val();
+    var length = text.length;
+
+    if (length > maxChars) {
+      $(this).text(text.substring(0, maxChars));
+    } else {
+      console.log(maxChars - length);
+      $('span').empty().append(maxChars - length);
+    }
+  });
+
+});
+
+</script>
