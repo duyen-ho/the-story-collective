@@ -18,12 +18,15 @@
 
   <body>
 
-    <nav class="nav-extended">
+    <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo black-text">Story Collective</a>
+        <a href="/" class="logo center">The Story Collective</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <% if logged_in? %>
-          <li><a href="/users/<%=current_user.id%>"><%= current_user.name %></a></li>
+          <li><a href="/stories/new">Create</a></li>
+          <li><a href="/stories">Read</a></li>
+          <li><a href="#">Write</a></li>
+          <li><a class="black-text" href="/users/<%=current_user.id%>"><%= current_user.name %></a></li>
           <li>
             <form action="/logout" method="post">
               <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
@@ -35,11 +38,6 @@
           <li><a href="/login">Log In</a></li>
           <li><a href="/signup">Sign Up</a></li>
           <% end %>
-        </ul>
-        <ul class="tabs tabs-transparent">
-          <li><a href="/stories/new">Create</a></li>
-          <li><a href="/stories">Read</a></li>
-          <li><a href="#">Write</a></li>
         </ul>
       </div>
     </nav>

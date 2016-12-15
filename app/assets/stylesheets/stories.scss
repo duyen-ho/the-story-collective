@@ -1,3 +1,43 @@
-// Place all the styles related to the stories controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Index */
+h2 {
+  padding: 2rem;
+  font-size: .8rem;
+  text-align: center;
+}
+
+.margin {
+  margin: 2rem;
+}
+
+.story-titles {
+  display: inline-block;
+  list-style: none;
+  font-family: 'Radley', serif;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+.story-titles span:hover {
+  text-decoration: underline;
+}
+
+.open-story-wrapper {
+  padding: 2rem 0;
+  margin: auto;
+}
+
+.open-story-block {
+  height: 10rem;
+}
+
+.open-story-block:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.open-story-block span {
+  font-family: 'Radley', serif;
+  font-size: 2rem;
+  text-transform: capitalize;
+}

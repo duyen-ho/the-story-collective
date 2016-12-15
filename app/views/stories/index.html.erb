@@ -19,30 +19,26 @@
     </div>
   </div>
 
-  <div class="row margin">
-      <h2>Open Stories</h2>
+  <div class="row margin open-story-wrapper">
+    <h2>Open Stories</h2>
 
-      <div class="open-story-wrapper">
-
+      <div>
         <% @stories.each do |story| %>
-
           <% @parts = Part.where(story_id: story.id) %>
           <% if @parts.length < 10 %>
           <div class="col l4 open-story-block">
             <a href="/stories/<%= story.id %>">
               <span><%= @parts[0].body.split.first %></span> <%= @parts[0].body.split[1..-1].join(' ') %>
             </a>
-
           </div>
           <% end %>
-
         <% end %>
-      </div>
 
+      </div>
   </div>
 
 </div>
 
 <script type="text/javascript">
-  
+
 </script>
