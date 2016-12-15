@@ -24,7 +24,7 @@
           <% if logged_in? %>
           <li><a href="/stories/new">Create</a></li>
           <li><a href="/stories">Read</a></li>
-          <li><a href="#">Write</a></li>
+          <li><a href="/stories">Write</a></li>
           <li><a class="black-text" href="/users/<%=current_user.id%>"><%= current_user.name %></a></li>
           <li>
             <form action="/logout" method="post">

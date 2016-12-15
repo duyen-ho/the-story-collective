@@ -26,11 +26,14 @@
         <% @stories.each do |story| %>
           <% @parts = Part.where(story_id: story.id) %>
           <% if @parts.length < 10 %>
+
           <div class="col l4 open-story-block">
             <a href="/stories/<%= story.id %>">
-              <span><%= @parts[0].body.split.first %></span> <%= @parts[0].body.split[1..-1].join(' ') %>
+              <span><%= @parts[0].body.split.first %></span>
+              <%= @parts[0].body.split(' ').drop(1).join(' ') %>
             </a>
           </div>
+
           <% end %>
         <% end %>
 
