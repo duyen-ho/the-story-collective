@@ -62,6 +62,7 @@ descriptions = [
   'Stop worrying about growing old. And think about growing up.',
   'Are we really that lost that we need positive affirmation quotes? Please, society.',
   'I like to keep it light.',
+  'JFDI'
 ]
 
 story_titles = [
@@ -84,24 +85,14 @@ story_1_parts = [
   'I can’t I can’t I can’t I can’t I can’t I can’t',
   'I can’t I can’t I can’t I can’t I can’t I can’t',
   'I can’t I can’t I can’t I can’t I can’t I can’t',
+  'I can’t I can’t I can’t I can’t I can’t I can’t',
   'I can’t I can’t',
   'You can.',
-  'It’s called',
-  'Psycholinguistics.',
-  ''
+  'It’s called Psycholinguistics.'
 ]
 
 story_2_parts = [
-  'Rump andouille swine tri-tip tail brisket ball tip sirloin prosciutto frankfurter doner t-bone shankle.',
-  '',
-  '',
-  '',
-  '',
-  '',
-  '',
-  '',
-  '',
-  ''
+  'Rump andouille swine tri-tip tail brisket ball tip sirloin prosciutto frankfurter doner t-bone shankle.'
 ]
 
 story_3_parts = [
@@ -114,21 +105,14 @@ story_3_parts = [
   'Autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat.',
   'Molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga.',
   'Quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam.',
-  'Aliquam quaerat voluptatem voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis.',
-  ''
+  'Aliquam quaerat voluptatem voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis.'
 ]
 
 story_4_parts = [
   'Filet mignon burgdoggen shoulder chicken. Jerky bresaola kielbasa flank frankfurter.',
   'Meatloaf shoulder filet mignon, tenderloin brisket landjaeger shankle. Short ribs rump salami, sirloin short loin tail corned beef.',
   'Bresaola ribeye landjaeger ham hock pastrami pork chop tongue pork loin meatball jowl burgdoggen.',
-  'Doner corned beef pig drumstick short ribs tenderloin turducken, spare ribs shankle prosciutto biltong leberkas.',
-  '',
-  '',
-  '',
-  '',
-  '',
-  ''
+  'Doner corned beef pig drumstick short ribs tenderloin turducken, spare ribs shankle prosciutto biltong leberkas.'
 ]
 
 story_5_parts = [
@@ -141,21 +125,14 @@ story_5_parts = [
   'The following morning, Dutilleul was annoyed to wake up with a nasty headache. It didn’t bother him badly and he wasn’t going to let such a',
   'minor thing keep him form his next rendezvous. Still, when he happened to find a few pills scattered at the back of a drawer, he gulped down',
   'one that morning and one in the afternoon. By evening, his headache was bearable and in his elation, he managed to forget it completely.',
-  'When he was leaving, while walking through the partitions and walls of the house, Dutilleul had an unfamiliar feeling.',
-  ''
+  'When he was leaving, while walking through the partitions and walls of the house, Dutilleul had an unfamiliar feeling.'
 ]
 
 story_6_parts = [
   'The orchestra played for them.',
   'They ran into the night.',
   'Daphnis: You make good food.',
-  'Chloe: You’re good in bed.',
-  '',
-  '',
-  '',
-  '',
-  '',
-  ''
+  'Chloe: You’re good in bed.'
 ]
 
 story_7_parts = [
@@ -164,38 +141,33 @@ story_7_parts = [
   'For a man who walk through walls, there can be no dazzling career if he hasn’t at least seen the inside of a prison.',
   'The following morning, Dutilleul was annoyed to wake up with a nasty headache. It didn’t bother him badly and he wasn’t going to let such a',
   'minor thing keep him form his next rendezvous. Still, when he happened to find a few pills scattered at the back of a drawer, he gulped down',
-  'one that morning and one in the afternoon. By evening, his headache was bearable and in his elation, he managed to forget it completely.',
-  '',
-  '',
-  '',
-  ''
+  'one that morning and one in the afternoon. By evening, his headache was bearable and in his elation, he managed to forget it completely.'
 ]
 
 story_8_parts = [
   'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?',
   'At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.',
   'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit.',
-  'Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae.',
-  '',
-  '',
-  '',
-  '',
-  '',
-  ''
+  'Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae.'
 ]
 
 
 story_9_parts = [
   'Bresaola ribeye landjaeger ham hock pastrami pork chop tongue pork loin meatball jowl burgdoggen.',
-  'Doner corned beef pig drumstick short ribs tenderloin turducken, spare ribs shankle prosciutto biltong leberkas.',
-  '',
-  '',
-  '',
-  '',
-  '',
-  '',
-  '',
-  ''
+  'Doner corned beef pig drumstick short ribs tenderloin turducken, spare ribs shankle prosciutto biltong leberkas.'
+]
+
+story_10_parts = [
+  'Nobody can understand this. Our verbose individual twists. How will a dissimilar electron adopt a patent? A bread yields whatever is cuddly.',
+  'Can a biologist lift a disgusting algorithm?'
+]
+
+story_11_parts = [
+  'A sigh springs onto the carrot. Why does a rushed receipt park an incompetent tube? The back tables the positioning address.'
+]
+
+story_12_parts = [
+  'The delicate repertoire fields the suspect conductor. Does a spontaneous viewer multiply into the sympathy?'
 ]
 
 users = []
@@ -205,6 +177,7 @@ User.delete_all
 Story.delete_all
 Part.delete_all
 
+# Users
 11.times do |i|
   user = User.new
   user.name = usernames[i]
@@ -216,15 +189,13 @@ Part.delete_all
   users << user
 end
 
-6.times do |i|
+# Story Titles
+story_titles.length.times do |i|
   story = Story.new
   story.title = story_titles[i]
   story.save
   stories << story
 end
-
-# Generating parts will run into story and timestamp issues
-# Run these commands one at a time
 
 # Story 1
 story_1_parts.length.times do |i|
@@ -234,10 +205,9 @@ story_1_parts.length.times do |i|
   part.body = story_1_parts[i]
   part.save
 end
-# need to delete part 11
 
 # Story 2
-1.times do |i|
+story_2_parts.length.times do |i|
   part = Part.new
   part.user_id = i + 4
   part.story_id = 2
@@ -246,17 +216,16 @@ end
 end
 
 # Story 3
-11.times do |i|
+story_3_parts.length.times do |i|
   part = Part.new
   part.user_id = i + 1
   part.story_id = 3
   part.body = story_3_parts[i]
   part.save
 end
-# need to delete part 11
 
 # Story 4
-3.times do |i|
+story_4_parts.length.times do |i|
   part = Part.new
   part.user_id = i + 2
   part.story_id = 4
@@ -265,17 +234,16 @@ end
 end
 
 # Story 5
-11.times do |i|
+story_5_parts.length.times do |i|
   part = Part.new
   part.user_id = i + 1
   part.story_id = 5
   part.body = story_5_parts[i]
   part.save
 end
-# need to delete part 11
 
 # Story 6
-4.times do |i|
+story_6_parts.length.times do |i|
   part = Part.new
   part.user_id = i + 2
   part.story_id = 6
@@ -286,30 +254,53 @@ end
 # Story 7
 story_7_parts.length.times do |i|
   part = Part.new
-  part.user_id = i + 1
+  part.user_id = i + 2
   part.story_id = 7
-  part.body = story_6_parts[i]
+  part.body = story_7_parts[i]
   part.save
 end
 
 # Story 8
 story_8_parts.length.times do |i|
   part = Part.new
-  part.user_id = i + 1
+  part.user_id = i + 3
   part.story_id = 8
-  part.body = story_6_parts[i]
+  part.body = story_8_parts[i]
   part.save
 end
 
 # Story 9
 story_9_parts.length.times do |i|
   part = Part.new
-  part.user_id = i + 1
+  part.user_id = i + 2
   part.story_id = 9
-  part.body = story_6_parts[i]
+  part.body = story_9_parts[i]
   part.save
 end
 
-Part.where(story_id: 1).last.destroy
-Part.where(story_id: 3).last.destroy
-Part.where(story_id: 5).last.destroy
+# Story 10
+story_10_parts.length.times do |i|
+  part = Part.new
+  part.user_id = i + 2
+  part.story_id = 10
+  part.body = story_10_parts[i]
+  part.save
+end
+
+# Story 11
+story_11_parts.length.times do |i|
+  part = Part.new
+  part.user_id = i + 1
+  part.story_id = 11
+  part.body = story_11_parts[i]
+  part.save
+end
+
+# Change default for complete stories
+[1, 3, 5].each do |i|
+  story = Story.find(i)
+  story.is_completed = true
+  story.save
+end
+
+[1, 3, 5].each do |i| story = Story.find(i) story.is_completed = true story.save end
