@@ -45,14 +45,20 @@
     <div id="fragments" class="col s8 offset-s2">
       <h2>Title <%= @story.title %></h2>
       <ul class="collection">
+
         <% @parts.each do |part| %>
         <li class="collection-item avatar">
           <a href="/users/<%= part.user_id %>"><img src="http://placehold.it/50x50" class="circle"></a>
           <p><%= part.body %></p>
-          <a class="username-link" href="#"><%= User.find(part.user_id).name %></a>
+
+          <a class="username-link" href="#">
+            @<%= get_username part %>
+          </a>
+
           <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
         </li>
         <% end %>
+
       </ul>
       <% if current_user == nil %>
       <p><a href="/login">Log In</a> or <a href="/signup">Sign up</a> to contribute to this story</p>

@@ -4,17 +4,14 @@
     <div class="col l6 offset-l3 center">
       <h2>Finished Stories</h2>
 
-      <% @stories.each do |story| %>
-        <% @parts = Part.where(story_id: story.id) %>
-        <% if @parts.length == 10 %>
-            <a class="story-titles" href="/stories/<%= story.id %>">
-              <% if story.title == '' %>
-              <span>Untitled</span> /
-              <% else %>
-              <span><%= story.title %></span> /
-              <% end %>
-            </a>
-        <% end %>
+      <% @completed_stories.each do |story| %>
+        <a class="story-titles" href="/stories/<%= story.id %>">
+          <% if story.title == '' %>
+          <span>Untitled</span> /
+          <% else %>
+          <span><%= story.title %></span> /
+          <% end %>
+        </a>
       <% end %>
     </div>
   </div>
@@ -23,25 +20,16 @@
     <h2>Open Stories</h2>
 
       <div>
-        <% @stories.each do |story| %>
-          <% @parts = Part.where(story_id: story.id) %>
-          <% if @parts.length < 10 %>
-
-          <div class="col l4 open-story-block">
-            <a href="/stories/<%= story.id %>">
-              <span><%= @parts[0].body.split.first %></span>
-              <%= @parts[0].body.split(' ').drop(1).join(' ') %>
-            </a>
-          </div>
-
-          <% end %>
-        <% end %>
-
+      <% @open_stories_parts.each do |part| %>
+        <div class="col l4 open-story-block">
+          <a href="/stories/<%= part.story_id %>">
+            <span><%= part.body.split.first %></span>
+            <%= part.body.split(' ').drop(1).join(' ') %>
+          </a>
+        </div>
+      <% end %>
       </div>
+
   </div>
 
 </div>
-
-<script type="text/javascript">
-
-</script>
