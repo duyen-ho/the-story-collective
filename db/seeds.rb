@@ -296,11 +296,9 @@ story_11_parts.length.times do |i|
   part.save
 end
 
-# Change default for complete stories
+# Change default setting for completed stories
 [1, 3, 5].each do |i|
   story = Story.find(i)
   story.is_completed = true
   story.save
 end
-
-[1, 3, 5].each do |i| story = Story.find(i) story.is_completed = true story.save end
