@@ -2,13 +2,24 @@
   <div class="row">
     <div class="col s2 offset-s5 margin">
       <ul class="pagination">
-          <% if @story.id != 1 %>
-          <li><a href="/stories/<%= @story.id - 1 %>"><i class="material-icons">chevron_left</i></a></li>
-          <% end %>
-          <% if @story.id != Story.count %>
-          <li><a href="/stories/<%= @story.id + 1 %>"><i class="material-icons">chevron_right</i></a></li>
-          <% end %>
-        </ul>
+
+        <% if @story.id != 1 %>
+          <li>
+            <a href="/stories/<%= @story.id - 1 %>">
+              <i class="material-icons">chevron_left</i>
+            </a>
+          </li>
+        <% end %>
+
+        <% if @story.id != Story.count %>
+          <li>
+            <a href="/stories/<%= @story.id + 1 %>">
+              <i class="material-icons">chevron_right</i>
+            </a>
+          </li>
+        <% end %>
+
+      </ul>
     </div>
   </div>
   </div>
@@ -18,28 +29,38 @@
 
     <div class="col s12">
       <ul class="tabs">
-        <li id="narrative-tab" class="tab col s4 offset-s2"><a href="#narrative">Narrative</a></li>
-        <li id="fragments-tab" class="tab col s4"><a href="#fragments">Fragments</a></li>
+        <li id="narrative-tab" class="tab col s4 offset-s2">
+          <a href="#narrative">Narrative</a>
+        </li>
+        <li id="fragments-tab" class="tab col s4">
+          <a href="#fragments">Fragments</a>
+        </li>
       </ul>
     </div>
 
     <div id="narrative" class="col s8 offset-s2">
       <h2>Title <%= @story.title %></h2>
+
       <% @parts.each do |part| %>
         <%= part.body %>
       <% end %>
+
       <% if current_user == nil %>
-      <p><a href="/login">Log In</a> or <a href="/signup">Sign up</a> to contribute to this story</p>
+        <p>
+          <a href="/login">Log In</a> or
+          <a href="/signup">Sign up</a> to contribute to this story
+        </p>
       <% elsif @parts.length < 10 && @parts.last.user_id != current_user.id %>
-      <form action="/stories/<%= @story.id %>" method="post">
-        <input type="hidden" name="_method" value="patch">
-        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-        <label for="part">Enter the next part</label>
-        <input name="body" type="text">
-        <span></span> characters
-        <button class="waves-effect waves-light btn black right">Submit</button>
-      </form>
+        <form action="/stories/<%= @story.id %>" method="post">
+          <input type="hidden" name="_method" value="patch">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <label for="part">Enter the next part</label>
+          <input name="body" type="text">
+          <span></span> characters
+          <button class="waves-effect waves-light btn black right">Submit</button>
+        </form>
       <% end %>
+
     </div>
 
     <div id="fragments" class="col s8 offset-s2">
@@ -47,50 +68,82 @@
       <ul class="collection">
 
         <% @parts.each do |part| %>
-        <li class="collection-item avatar">
-          <a href="/users/<%= part.user_id %>"><img src="http://placehold.it/50x50" class="circle"></a>
-          <p><%= part.body %></p>
+          <li class="collection-item avatar" data-part-id="<%= part.id %>">
+            <a href="/users/<%= part.user_id %>">
+              <img src="http://placehold.it/50x50" class="circle">
+            </a>
+            <p><%= part.body %></p>
 
-          <a class="username-link" href="#">
-            @<%= get_username part %>
-          </a>
+            <a class="username-link" href="#">
+              @<%= get_username part %>
+            </a>
 
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
+            <a href="#!" class=" secondary-content">
+              <i class="material-icons star">grade</i>
+            </a>
+            <div class="right count">
+              <%= part.likes.count %> likes
+            </div>
+          </li>
         <% end %>
 
       </ul>
-      <% if current_user == nil %>
-      <p><a href="/login">Log In</a> or <a href="/signup">Sign up</a> to contribute to this story</p>
-      <% elsif @parts.length < 10 && @parts.last.user_id != current_user.id %>
-      <form action="/stories/<%= @story.id %>" method="post">
-        <input type="hidden" name="_method" value="patch">
-        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-        <label for="part">Enter the next part</label>
-        <input name="body" type="text">
-        <span></span>  characters
-        <button class="waves-effect waves-light btn black right">Submit</button>
-      </form>
-      <% end %>
-    </div>
 
+      <% if current_user == nil %>
+        <p>
+          <a href="/login">Log In</a> or
+          <a href="/signup">Sign up</a> to contribute to this story
+        </p>
+      <% elsif @parts.length < 10 && @parts.last.user_id != current_user.id %>
+        <form action="/stories/<%= @story.id %>" method="post">
+          <input type="hidden" name="_method" value="patch">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <label for="part">Enter the next part</label>
+          <input name="body" type="text">
+          <span></span>  characters
+          <button class="waves-effect waves-light btn black right">Submit</button>
+        </form>
+      <% end %>
+
+    </div>
   </div>
 </div>
 
-<script type="text/javascript">
+<script>
 
 $(document).ready(function() {
 
+  // to add a like to a part
+  $('.star').on('click', function(event) {
+    event.preventDefault();
+
+    var item = $(event.target).closest('.collection-item');
+    var part_id = item.data('part-id');
+    var options = {
+      url: '/api/likes',
+      method: 'POST',
+      data: { part_id }
+    }
+
+    var updateCount = function(response) {
+      item
+      .find('.count')
+      .text(response.like_count +  ' likes');
+    };
+
+    $.ajax(options).done(updateCount);
+  });
+
+  // calculates remaining words in text box
   var maxChars = 140;
   $('span').empty().append(maxChars);
 
   $('input').keyup(function() {
-
-    var text = $(this).val();
-    var length = text.length;
+    var inputValue = $(this).val();
+    var length = inputValue.length;
 
     if (length > maxChars) {
-      $(this).text(text.substring(0, maxChars));
+      $(this).text(inputValue.substring(0, maxChars));
     } else {
       console.log(maxChars - length);
       $('span').empty().append(maxChars - length);

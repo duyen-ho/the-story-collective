@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   get 'stories/:id/edit', to: 'parts#edit'
   patch 'stories/:id', to: 'parts#update'
 
+  post '/api/likes', to: 'api/likes#create'
 
 end
