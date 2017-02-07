@@ -4,7 +4,7 @@ Remember 'The Exquisite Corpse' game from childhood? A piece of paper was folded
 
 I love the spirit of open source and wanted to incorporate the idea of democratised contributions. 'The Story Collective' contains stories – or flash fiction pieces – consisting of 10 parts from 10 different contributors.
 
-Everyone can read finished works by a collective of writers. When users sign up or login to, they can write story parts of up to 100 characters. Once a part is submitted, the story moves forward until it reaches the end. This app is a social way to connect with other writers and users can even form groups to write with more like-minded writers.
+Everyone can read finished works by a collective of writers. When users sign up or login to, they can write story parts of up to 140 characters. Once a part is submitted, the story moves forward until it reaches the end. This app is a social way to connect with other writers.
 
 - **[Live demo](https://gentle-dusk-77641.herokuapp.com/)**
 
@@ -27,3 +27,4 @@ rails s
 
 ## Future updates
 - Add a likes-based scoring system to filter stories and populate the best results first
+– Add a 'Form Group' functionality so users can connect with even more like-minded writers and create new stories together
