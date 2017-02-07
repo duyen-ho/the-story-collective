@@ -27,4 +27,4 @@ rails s
 
 ## Future updates
 - Add a likes-based scoring system to filter stories and populate the best results first
-– Add a 'Form Group' functionality so users can connect with even more like-minded writers and create new stories together
+- Add a 'Form Group' functionality so users can connect with more like-minded writers
